@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url("../fonts/FontAwesome/fa-regular-400.ttf");
+}
+
+html {
+    overflow-y: overlay;
+}
+
+a, input[type=button] {
+    cursor: pointer;
+}
+
+a:hover {
+    color: pink;
+    transition: .2s;
+}
+
+.site-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.centered-thing {
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #f81153;
+    border-radius: 5px;
+    color: white;
+}
+
+.button:hover {
+    background-color: #ff4e73;
+    color: white;
+}
+
+.section-margin {
+    font-family: Roboto;
+    margin-top: 75px;
+}
+
+@media (max-width: 650px) {
+    .section-margin {
+        margin-top: 50px;
+    }
+    .section-title {
+        text-align: center;
+    }
+}
+
+
+
+
+header {
+    width: 100%;
+    font-family: Montserrat;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.1);
+
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.test-0-logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 60px;
+    width: 200px;
+}
+
+.test-0-logo img {
+    height: 100%;
+}
+
+.test-0-nav {
+    display: flex;
+    margin: 0;
+}
+
+.test-0-nav .button {
+    color: black;
+    background-color: white;
+    padding: 10px 15px;
+    transition: .25s;
+}
+
+.test-0-nav .button:hover {
+    color: white;
+    background-color: pink;
+    border-radius: 0;
+    transition: .25s;
+}
+
+.test-0-nav-4 span {
+    font-family: FontAwesome;
+}
+
+.header-margin {
+    margin-top: 80px;
+}
+
+
+
+@media (max-width: 650px) {
+    header nav > a:nth-last-child(n + 4) {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    header nav > a:nth-last-child(n + 3) {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    header nav > a:nth-last-child(n + 2) {
+        display: none;
+    }
+}
+
+
+#landing-image {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/plan-road-trip-tips-ideas copy.png") 50% 20% no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+#landing-image .centered-thing {
+    width: 100%;
+    height: 100%;
+}
+
+.landing-container {
+    margin: auto;
+}
+
+#landing-image h1, h2 {
+    text-align: center;
+
+    font-family: Montserrat;
+}
+
+#landing-image h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #dfe5ff;
+}
+
+#landing-image h2 {
+    margin-top: 5px;
+    font-size: 16pt;
+    font-weight: normal;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    #landing-image h1 {
+        font-size: 18pt;
+    }
+}
+
+
+
+.ticket-items {
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
+    grid-gap: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.ticket-item {
+    width: 100%;
+}
+
+.ticket-item input {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 20px 0 20px 7px;
+    width: 100%;
+    font-family: Roboto;
+}
+
+.test-0-fnp {
+    min-width: 175px;
+}
+
+.test-0-fbs {
+    background: #f81153;
+}
+
+.test-0-fbs input {
+    background: #f81153;
+    color: white;
+    padding-top: 21px;
+    padding-bottom: 22px;
+    transition: .25s;
+}
+
+.test-0-fbs input:hover {
+    background-color: #ff4e73;
+    color: white;
+    transition: .25s;
+}
+
+@media (max-width: 650px) {
+    .ticket-items {
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    #buy {
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .ticket-items {
+        grid-template: repeat(6, 1fr) / 1fr;
+    }
+}
+
+
+.info-max-thingy {
+    max-width: 300px;
+}
+
+.input-items {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.input-items input {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 20px 5px;
+    width: 100%;
+}
+
+.input-item-2 {
+    min-width: 110px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.graphics {
+    font-family: monospace;
+    font-size: 14pt;
+    margin-top: 15px;
+}
+
+.graphics .flight-probability, .price {
+    width: min-content;
+
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.graphics .flight-probability {
+    background-size: 0% 1px;
+    background-image: linear-gradient(cornflowerblue, cornflowerblue);
+}
+
+.graphics .price {
+    background-size: 100% 1px;
+    background-image: linear-gradient(orange, orange);
+    margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+    .info-max-thingy {
+        margin: auto;
+    }
+}
+
+
+.promotions-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.promotion-item {
+    display: grid;
+    grid-template-rows: 150px auto auto max-content;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    overflow: hidden;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    font-family: Roboto;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.test-0-an {
+    font-size: 16pt;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.test-0-ai {
+    height: 150px;
+    background-size: cover;
+}
+
+.test-0-ad {
+    text-align: justify;
+    padding: 15px;
+}
+
+.test-0-abm {
+    justify-self: end;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.promotion-item-1 .test-0-ai {
+    background: url("../images/promotions/promotion1.jpg") no-repeat 50% 50%;
+}
+
+.promotion-item-2 .test-0-ai {
+    background: url("../images/promotions/promotion2.jpg") no-repeat 70% 30%;
+}
+
+.promotion-item-3 .test-0-ai {
+    background: url("../images/promotions/promotion3.jpg") no-repeat 30% 35%;
+}
+
+.promotion-item-4 .test-0-ai {
+    background: url("../images/promotions/promotion4.jpg") no-repeat 0 50%;
+}
+
+@media (max-width: 650px) {
+    .promotions-items {
+        grid-template-columns: 1fr;
+    }
+    .promotion-item {
+        max-width: 500px;
+    }
+}
+
+
+#subscriptions {
+    background-color: #b4bace;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.the-subscribe-thing {
+    display: block;
+}
+
+.subscribe-item, .test-0-sie {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subscribe-text {
+    font-size: 16pt;
+}
+
+.subscribe-inputs {
+    display: flex;
+}
+
+.subscribe-inputs input {
+    font-family: Roboto;
+}
+
+.test-0-sie {
+    border: none;
+    min-width: 180px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.test-0-sbs {
+    border: none;
+    color: white;
+    background-color: #3B3F42;
+    width: 130px;
+    cursor: pointer;
+}
+
+.test-0-sie:focus {
+    outline: none;
+}
+
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: #2f2f2f;
+    color: white;
+    font-family: "Roboto", "Comic Sans MS";
+    font-weight: bold;
+    text-align: center;
+}
+
+.test-0-phone {
+    font-weight: normal;
+    font-size: 18pt;
+}
+
+footer nav {
+    font-weight: normal;
+    display: flex;
+    padding-top: 25px;
+    font-size: 8pt;
+}
+
+footer nav a {
+    margin-left: 10px;
+}
+
+
+/* Авторизашка */
+
+#auth-page {
+    background-color: #ececec;
+}
+
+#auth {
+    width: 100%;
+    margin-top: 150px;
+}
+
+.authorisation {
+    background-color: white;
+    min-height: 150px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    font-family: Roboto;
+    font-weight: lighter;
+}
+
+.authorisation div {
+    text-align: center;
+    width: 100%;
+}
+
+.authorisation input {
+    outline: none;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid #d6e0ee;
+    width: 100%;
+    padding: 10px 2px;
+    color: #666;
+}
+
+.authorisation input:focus {
+    background-color: #f8faff;
+}
+
+.authorisation .title {
+    text-align: center;
+    color: #666;
+    font-size: 16pt;
+}
+
+.authorisation .phone-number {
+    margin-top: 30px;
+}
+
+.authorisation .password {
+    margin-top: 15px;
+}
+
+.authorisation .sign-in {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.authorisation .test-1-fbs {
+    border-radius: 0;
+    width: 100%;
+    font-size: 12pt;
+    padding: 10px 20px;
+}
+
+#auth-page footer {
+    margin-top: 366px;
+}
+
+/* Регистрашка */
+
+#register-page {
+    background-color: #ececec;
+}
+
+#register {
+    margin-top: 150px;
+    width: 100%;
+}
+
+.register {
+    background-color: white;
+    min-height: 150px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    font-family: Roboto;
+    font-weight: lighter;
+}
+
+.register div {
+    text-align: center;
+    width: 100%;
+}
+
+.register input {
+    outline: none;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid #d6e0ee;
+    width: 100%;
+    padding: 10px 0 10px 2px;
+    color: #666;
+}
+
+.register input:focus {
+    background-color: #f8faff;
+}
+
+.register-item {
+    margin-top: 15px;
+}
+
+.register .title {
+    text-align: center;
+    color: #666;
+    font-size: 16pt;
+}
+
+.register .first-name {
+    margin-top: 30px;
+}
+
+.register .sign-up {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.register .sign-up a {
+    display: block;
+    padding: 10px 0 10px 2px;
+    border-radius: 0;
+    width: 100%;
+}
+
+#register-page footer {
+    margin-top: 152px;
+}
